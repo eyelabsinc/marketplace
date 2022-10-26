@@ -160,7 +160,7 @@ const Navbar: FC = () => {
               {filterComponent && filterComponent}
             </div>
           )}
-         
+          
           <CartMenu />
           <ConnectWallet/>
           <ThemeSwitcher />

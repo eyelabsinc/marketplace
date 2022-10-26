@@ -33,9 +33,14 @@ const ConnectWallet: FC = () => {
   const { dispatch } = useContext(GlobalContext)
   const isMounted = useMounted()
 
+
+  
+
   if (!isMounted) {
     return null
   }
+
+
 
   if (!account.isConnected) return <ConnectWalletButton />
 
@@ -79,11 +84,11 @@ const ConnectWallet: FC = () => {
           </Link>
 
           <Link href={``}>
-            <DropdownMenu.Item asChild>
+            <Build/>
               <a className="group flex w-full cursor-pointer items-center justify-between rounded px-4 py-3 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800">
                 Build
               </a>
-            </DropdownMenu.Item>
+            
           </Link>
         
           <DropdownMenu.Item asChild>
@@ -125,6 +130,7 @@ const ConnectWallet: FC = () => {
     </DropdownMenu.Root>
     
   )
+  
 }
 
 export default ConnectWallet
