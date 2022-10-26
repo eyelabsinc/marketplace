@@ -151,6 +151,7 @@ const Navbar: FC = () => {
         <div className="ml-auto flex">
           {!hasCommunityDropdown && filterComponent && filterComponent}
           <CartMenu />
+          
           <HamburgerMenu externalLinks={externalLinks} />
         </div>
       ) : (
@@ -161,7 +162,8 @@ const Navbar: FC = () => {
             </div>
           )}
           
-          <CartMenu />
+          <CartMenu/>
+          
           <ConnectWallet/>
           <ThemeSwitcher />
         </div>
