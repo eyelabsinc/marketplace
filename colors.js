@@ -160,6 +160,14 @@ const primaryColors = {
     700: '#7000FF',
     900: '#430099',
   },
+  eye: {
+    100: '#FF1616',
+    300: '#E2CCFF',
+    500: '#A966FF',
+    700: '#222222',
+    900: '#FF1616',
+
+  }
 }
 
 module.exports = primaryColors

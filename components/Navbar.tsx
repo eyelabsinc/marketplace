@@ -6,6 +6,9 @@ import { paths } from '@reservoir0x/reservoir-kit-client'
 import setParams from 'lib/params'
 import NavbarLogo from 'components/navbar/NavbarLogo'
 import ThemeSwitcher from './ThemeSwitcher'
+import Build from './Build'
+import Sell from './Sell'
+import Buy from './Buy'
 import CartMenu from './CartMenu'
 import SearchMenu from './SearchMenu'
 import { useMediaQuery } from '@react-hookz/web'
@@ -41,7 +44,7 @@ const Navbar: FC = () => {
     null
   )
   const isMobile = useMediaQuery('(max-width: 770px)')
-  const showDesktopSearch = useMediaQuery('(min-width: 1200px)')
+  const showDesktopSearch = useMediaQuery('(min-width: 1000px)')
   const [hasCommunityDropdown, setHasCommunityDropdown] =
     useState<boolean>(false)
 
@@ -147,7 +150,10 @@ const Navbar: FC = () => {
       {isMobile ? (
         <div className="ml-auto flex">
           {!hasCommunityDropdown && filterComponent && filterComponent}
+          <Build />
           <CartMenu />
+          <Buy/>
+          <Sell/>
           <HamburgerMenu externalLinks={externalLinks} />
         </div>
       ) : (
@@ -157,8 +163,9 @@ const Navbar: FC = () => {
               {filterComponent && filterComponent}
             </div>
           )}
+         
           <CartMenu />
-          <ConnectWallet />
+          <ConnectWallet/>
           <ThemeSwitcher />
         </div>
       )}
