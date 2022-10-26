@@ -15,6 +15,9 @@ import FormatEth from './FormatEth'
 import { GlobalContext } from 'context/GlobalState'
 import ConnectWalletButton from 'components/ConnectWalletButton'
 import useMounted from 'hooks/useMounted'
+import Build from './Build'
+import Sell from './Sell'
+import Buy from './Buy'
 
 const DARK_MODE = process.env.NEXT_PUBLIC_DARK_MODE
 const DISABLE_POWERED_BY_RESERVOIR =
@@ -37,7 +40,9 @@ const ConnectWallet: FC = () => {
   if (!account.isConnected) return <ConnectWalletButton />
 
   return (
+    
     <DropdownMenu.Root>
+      
       <DropdownMenu.Trigger className="btn-primary-outline ml-auto rounded-full border-transparent bg-gray-100 normal-case dark:border-neutral-600 dark:bg-neutral-900 dark:ring-primary-900 dark:focus:ring-4">
         <EthAccount
           address={account.address}
@@ -46,7 +51,9 @@ const ConnectWallet: FC = () => {
             name: ensName,
           }}
         />
+           
       </DropdownMenu.Trigger>
+      
 
       <DropdownMenu.Content align="end" sideOffset={6}>
         <div
@@ -60,13 +67,25 @@ const ConnectWallet: FC = () => {
               {account.address && <Balance address={account.address} />}
             </span>
           </div>
+
+
+        
           <Link href={`/address/${account.address}`}>
             <DropdownMenu.Item asChild>
               <a className="group flex w-full cursor-pointer items-center justify-between rounded px-4 py-3 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800">
-                Portfolio
+                Sell
               </a>
             </DropdownMenu.Item>
           </Link>
+
+          <Link href={``}>
+            <DropdownMenu.Item asChild>
+              <a className="group flex w-full cursor-pointer items-center justify-between rounded px-4 py-3 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800">
+                Build
+              </a>
+            </DropdownMenu.Item>
+          </Link>
+        
           <DropdownMenu.Item asChild>
             <button
               key={wallet.id}
@@ -98,10 +117,13 @@ const ConnectWallet: FC = () => {
                 />
               </a>
             </Link>
+            
           </div>
         )}
+       
       </DropdownMenu.Content>
     </DropdownMenu.Root>
+    
   )
 }
 

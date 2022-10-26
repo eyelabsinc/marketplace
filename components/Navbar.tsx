@@ -44,7 +44,7 @@ const Navbar: FC = () => {
     null
   )
   const isMobile = useMediaQuery('(max-width: 770px)')
-  const showDesktopSearch = useMediaQuery('(min-width: 1000px)')
+  const showDesktopSearch = useMediaQuery('(min-width: 1200px)')
   const [hasCommunityDropdown, setHasCommunityDropdown] =
     useState<boolean>(false)
 
@@ -150,10 +150,7 @@ const Navbar: FC = () => {
       {isMobile ? (
         <div className="ml-auto flex">
           {!hasCommunityDropdown && filterComponent && filterComponent}
-          <Build />
           <CartMenu />
-          <Buy/>
-          <Sell/>
           <HamburgerMenu externalLinks={externalLinks} />
         </div>
       ) : (

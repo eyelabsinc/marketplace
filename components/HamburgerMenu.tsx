@@ -95,9 +95,29 @@ const HamburgerMenu: FC<Props> = ({ externalLinks }) => {
                 className="group flex w-full cursor-pointer items-center justify-between rounded border-b border-neutral-300 p-4 text-[#4B5563] outline-none transition hover:bg-neutral-100 hover:text-[#1F2937] focus:bg-neutral-100 dark:border-neutral-600 dark:text-white dark:hover:bg-neutral-600"
                 onClick={() => setOpen(false)}
               >
-                Portfolio
+                Sell
               </a>
             </Link>
+
+            <Link href={``}>
+              <a
+                className="group flex w-full cursor-pointer items-center justify-between rounded border-b border-neutral-300 p-4 text-[#4B5563] outline-none transition hover:bg-neutral-100 hover:text-[#1F2937] focus:bg-neutral-100 dark:border-neutral-600 dark:text-white dark:hover:bg-neutral-600"
+                // onClick={() => setOpen(false)}
+              >
+                Buy
+              </a>
+            </Link>
+
+            <Link href={``}>
+              <a
+                className="group flex w-full cursor-pointer items-center justify-between rounded border-b border-neutral-300 p-4 text-[#4B5563] outline-none transition hover:bg-neutral-100 hover:text-[#1F2937] focus:bg-neutral-100 dark:border-neutral-600 dark:text-white dark:hover:bg-neutral-600"
+                // onClick={() => setOpen(false)}
+              >
+                Build
+              </a>
+            </Link>
+
+            
 
             <button
               key={wallet.id}
