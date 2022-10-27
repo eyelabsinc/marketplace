@@ -75,29 +75,7 @@ const ConnectWallet: FC = () => {
 
 
         
-          <Link href={`/address/${account.address}`}>
-            <DropdownMenu.Item asChild>
-              <a className="group flex w-full cursor-pointer items-center justify-between rounded px-4 py-3 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800">
-                Sell
-              </a>
-            </DropdownMenu.Item>
-          </Link>
-
-          {/* <Link href={`./`}>
-            
-              <a className="group flex w-full cursor-pointer items-center justify-between rounded px-4 py-3 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800">
-                Buy
-              </a>
-            
-          </Link> */}
-
-          <Link href={``}>
-            
-            <a className="group flex w-full cursor-pointer items-center justify-between rounded px-4 py-3 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800">
-              Build
-            </a>
-          
-        </Link>
+        
       
         
           <DropdownMenu.Item asChild>

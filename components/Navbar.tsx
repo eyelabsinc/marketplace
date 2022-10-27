@@ -13,6 +13,21 @@ import CartMenu from './CartMenu'
 import SearchMenu from './SearchMenu'
 import { useMediaQuery } from '@react-hookz/web'
 import useMounted from 'hooks/useMounted'
+import Link from 'next/link'
+import { url } from 'inspector'
+import {
+  useAccount,
+  useBalance,
+  useConnect,
+  useDisconnect,
+  useEnsAvatar,
+  useEnsName,
+} from 'wagmi'
+import EthAccount from './EthAccount'
+
+import { Balance } from './ConnectWallet'
+
+
 
 const SearchCollections = dynamic(() => import('./SearchCollections'))
 const CommunityDropdown = dynamic(() => import('./CommunityDropdown'))
@@ -43,7 +58,7 @@ const Navbar: FC = () => {
   const [filterComponent, setFilterComponent] = useState<ReactElement | null>(
     null
   )
-  const isMobile = useMediaQuery('(max-width: 770px)')
+  const isMobile = useMediaQuery('(max-width: 100px)')
   const showDesktopSearch = useMediaQuery('(min-width: 1200px)')
   const [hasCommunityDropdown, setHasCommunityDropdown] =
     useState<boolean>(false)
@@ -125,7 +140,8 @@ const Navbar: FC = () => {
   }
 
   return (
-    <nav className="sticky top-0 z-[1000] col-span-full flex items-center justify-between gap-2 border-b border-[#D4D4D4] bg-white px-6 py-4 dark:border-neutral-600 dark:bg-black md:gap-3 md:py-6 md:px-16">
+    // <nav className="sticky top-0 z-[1000] col-span-full flex items-center justify-between gap-2 border-b border-[#D4D4D4] bg-white px-6 py-4 dark:border-neutral-600 dark:bg-black md:gap-3 md:py-6 md:px-16"></nav>
+    <nav className="sticky top-0 z-[1000] col-span-full flex items-center justify-between gap-2 border-b border-[#D4D4D4] eye px-6 py-4 dark:border-neutral-600 dark:eye md:gap-3 md:py-6 md:px-16">
       <NavbarLogo className="z-10 max-w-[300px]" />
       {showLinks && (
         <div className="z-10 ml-12 hidden items-center gap-11 lg:flex">
@@ -150,24 +166,36 @@ const Navbar: FC = () => {
       {isMobile ? (
         <div className="ml-auto flex">
           {!hasCommunityDropdown && filterComponent && filterComponent}
-          <CartMenu />
           
+          <CartMenu/>
           <HamburgerMenu externalLinks={externalLinks} />
         </div>
       ) : (
+        
         <div className="z-10 ml-auto shrink-0 md:flex md:gap-2">
           {!hasCommunityDropdown && !showDesktopSearch && (
             <div className="ml-auto flex">
               {filterComponent && filterComponent}
             </div>
+            
           )}
-          
+           {/* <div className='absolute top-0 left-0 right-0 flex h-full w-full items-center '>
+          <Link href={'https://build.eye.watch/'}> Buy </Link>
+          </div>
+          <div className='absolute top-0 left-0 right-0 flex h-full w-full items-center'>
+          <Link href={'/address/${accountData.address}'}> Sell </Link> 
+          </div>
+          <div className='absolute top-0 left-0 right-0 flex h-full w-full items-center'>
+          <Link href={'https://build.eye.watch/'}> Build </Link>
+          </div> */}
+
+        
           <CartMenu/>
-          
           <ConnectWallet/>
           <ThemeSwitcher />
         </div>
       )}
+      
     </nav>
   )
 }

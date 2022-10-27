@@ -8,6 +8,8 @@ const PRIMARY_COLOR = process.env.NEXT_PUBLIC_PRIMARY_COLOR || 'default'
 
 const primaryColors = require('./colors')
 
+
+
 module.exports = {
   presetColors: primaryColors,
   content: [
@@ -44,8 +46,9 @@ module.exports = {
 
       colors: {
         primary: primaryColors[PRIMARY_COLOR],
-        'dark-backdrop': 'rgba(0, 0, 0, 0.8)',
-        backdrop: 'rgba(255, 255, 255, 0.8)',
+        'dark-backdrop': 'rgba(34, 34, 34, 0.8)',
+        backdrop: 'rgba(34, 34, 34, 0.8)',
+        'eye': '#222222',
       },
     },
   },

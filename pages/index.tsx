@@ -36,7 +36,7 @@ const metadata = {
     <meta name="description" content={description} />
   ),
   tagline: (tagline: string | undefined) => (
-    <>{tagline || 'NFT Marketplace for Communities & Builders'}</>
+    <>{tagline||'NFT Marketplace for Communities & Builders'}</>
   ),
   image: (image?: string) => {
     if (image) {
@@ -83,7 +83,7 @@ const Home: NextPage<Props> = ({ fallback }) => {
         {image}
       </Head>
       <header className="col-span-full mb-12 mt-[66px] px-4 md:mt-40 lg:px-0">
-        <h1 className="reservoir-h1 text-center dark:text-white">{tagline}</h1>
+        <h1 className="reservoir-h1 text-center px-40 dark:text-white ">{tagline}</h1>
       </header>
       <div className="col-span-full px-6 md:px-16">
         <div className="mb-9 flex w-full items-center justify-between">
