@@ -91,7 +91,7 @@ const MyDocument = function () {
           ))
         : null}
 
-      <body className="eye">
+      <body className="bg-eye">
         <Main/>
         <NextScript />
       </body>

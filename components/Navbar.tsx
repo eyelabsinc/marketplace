@@ -140,8 +140,8 @@ const Navbar: FC = () => {
   }
 
   return (
-    // <nav className="sticky top-0 z-[1000] col-span-full flex items-center justify-between gap-2 border-b border-[#D4D4D4] bg-white px-6 py-4 dark:border-neutral-600 dark:bg-black md:gap-3 md:py-6 md:px-16"></nav>
-    <nav className="sticky top-0 z-[1000] col-span-full flex items-center justify-between gap-2 border-b border-[#D4D4D4] eye px-6 py-4 dark:border-neutral-600 dark:eye md:gap-3 md:py-6 md:px-16">
+    <nav className="sticky top-0 z-[1000] col-span-full flex items-center justify-between gap-2 border-b border-[#D4D4D4] bg-eye px-6 py-4 dark:border-neutral-600 dark:eye md:gap-3 md:py-6 md:px-16">
+    {/* // <nav className="sticky top-0 z-[1000] col-span-full flex items-center justify-between gap-2 border-b border-[#D4D4D4] eye px-6 py-4 dark:border-neutral-600 dark:eye md:gap-3 md:py-6 md:px-16"> */}
       <NavbarLogo className="z-10 max-w-[300px]" />
       {showLinks && (
         <div className="z-10 ml-12 hidden items-center gap-11 lg:flex">
@@ -179,15 +179,15 @@ const Navbar: FC = () => {
             </div>
             
           )}
-           {/* <div className='absolute top-0 left-0 right-0 flex h-full w-full items-center '>
+           {/* <div className='absolute top-0 left-50 right-5 flex h-full w-full items-center '>
           <Link href={'https://build.eye.watch/'}> Buy </Link>
-          </div>
-          <div className='absolute top-0 left-0 right-0 flex h-full w-full items-center'>
+          </div> */}
+          {/* <div className='absolute top-0 left-0 right-0 flex h-full w-full items-center'>
           <Link href={'/address/${accountData.address}'}> Sell </Link> 
           </div>
           <div className='absolute top-0 left-0 right-0 flex h-full w-full items-center'>
           <Link href={'https://build.eye.watch/'}> Build </Link>
-          </div> */}
+          </div>  */}
 
         
           <CartMenu/>
