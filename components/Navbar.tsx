@@ -179,8 +179,6 @@ const Navbar: FC = () => {
             </div>
             
           )}
-          
-         
         
           <CartMenu/>
           <ConnectWallet/>
