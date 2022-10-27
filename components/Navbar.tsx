@@ -58,7 +58,7 @@ const Navbar: FC = () => {
   const [filterComponent, setFilterComponent] = useState<ReactElement | null>(
     null
   )
-  const isMobile = useMediaQuery('(max-width: 100px)')
+  const isMobile = useMediaQuery('(max-width: 770px)')
   const showDesktopSearch = useMediaQuery('(min-width: 1200px)')
   const [hasCommunityDropdown, setHasCommunityDropdown] =
     useState<boolean>(false)
@@ -179,16 +179,8 @@ const Navbar: FC = () => {
             </div>
             
           )}
-           {/* <div className='absolute top-0 left-50 right-5 flex h-full w-full items-center '>
-          <Link href={'https://build.eye.watch/'}> Buy </Link>
-          </div> */}
-          {/* <div className='absolute top-0 left-0 right-0 flex h-full w-full items-center'>
-          <Link href={'/address/${accountData.address}'}> Sell </Link> 
-          </div>
-          <div className='absolute top-0 left-0 right-0 flex h-full w-full items-center'>
-          <Link href={'https://build.eye.watch/'}> Build </Link>
-          </div>  */}
-
+          
+         
         
           <CartMenu/>
           <ConnectWallet/>
