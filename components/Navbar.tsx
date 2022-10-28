@@ -53,6 +53,7 @@ function getInitialSearchHref() {
 }
 
 const Navbar: FC = () => {
+  const account = useAccount()
   const isMounted = useMounted()
   const [showLinks, setShowLinks] = useState(true)
   const [filterComponent, setFilterComponent] = useState<ReactElement | null>(
@@ -68,12 +69,27 @@ const Navbar: FC = () => {
   if (typeof EXTERNAL_LINKS === 'string') {
     const linksArray = EXTERNAL_LINKS.split(',')
 
+    // href={`/address/${account.address}
+
     linksArray.forEach((link) => {
       let values = link.split('::')
+      if(values[0] === "Sell")
+      {
+        externalLinks.push({
+          name: values[0],
+          url: `/address/${account.address}`
+        })
+
+      }
+
+      else{
+
       externalLinks.push({
         name: values[0],
         url: values[1],
       })
+    }
+      
     })
   }
 
@@ -145,20 +161,12 @@ const Navbar: FC = () => {
   
       <NavbarLogo className="z-10 max-w-[300px]" /> 
       {showLinks && (
-        <div className="z-10 ml-12 hidden items-center gap-11 lg:flex">
-          {externalLinks.map(({ name, url }) => (
-            <a
-              key={url}
-              href={url}
-              rel="noopener noreferrer"
-              target="_blank"
-              className="text-dark reservoir-h6 hover:text-[#1F2937] dark:text-white"
-            >
-              {name}
-            </a>
-          ))}
-        </div>
-      )}
+    <div className="z-10 ml-12 hidden items-center gap-11 lg:flex">
+      {externalLinks.map(({ name, url }) => (
+           <a key={url} href={url} rel="noopener noreferrer" target="_self" className="text-dark reservoir-h6 hover:text-[#1F2937] dark:text-white">{name}</a>
+      ))}
+    </div>
+)}
       {(hasCommunityDropdown || showDesktopSearch) && (
         <div className="absolute top-0 left-0 right-0 flex h-full w-full items-center justify-center">
           {filterComponent && filterComponent}

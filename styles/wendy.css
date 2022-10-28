@@ -1,6 +1,9 @@
 @font-face {
-    font-family: 'wendy';
-    src: url('/fonts/wendy/wendy.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'wendy';
+  src:url('../public/fonts/webfonts_wendy/wendy.ttf.woff') format('woff'),
+      url('../public/fonts/webfonts_wendy/wendy.ttf.svg#wendy') format('svg'),
+      url('../public/fonts/webfonts_wendy/wendy.ttf.eot'),
+      url('../public/fonts/webfonts_wendy/wendy.ttf.eot?#iefix') format('embedded-opentype'); 
+  font-weight: normal;
+  font-style: normal;
 }
