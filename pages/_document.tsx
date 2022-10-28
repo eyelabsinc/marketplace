@@ -92,9 +92,12 @@ const MyDocument = function () {
         : null}
 
       <body className="bg-eye">
+        
         <Main/>
         <NextScript />
+      
       </body>
+      
     </Html>
   )
 }
