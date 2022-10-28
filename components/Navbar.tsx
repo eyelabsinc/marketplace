@@ -180,8 +180,10 @@ const Navbar: FC = () => {
             </div>
             
           )}
-        
           <CartMenu/>
+          {/* <div className="absolute top-0 left-10 right-0 flex h-full w-full items-center ">
+          <Link href={'/address/${account.address}'}>Sell</Link>
+          </div> */}
           <ConnectWallet/>
           <ThemeSwitcher />
         </div>
