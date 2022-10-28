@@ -59,7 +59,7 @@ const Navbar: FC = () => {
     null
   )
   const isMobile = useMediaQuery('(max-width: 770px)')
-  const showDesktopSearch = useMediaQuery('(min-width: 1200px)')
+  const showDesktopSearch = useMediaQuery('(min-width: 1400px)')
   const [hasCommunityDropdown, setHasCommunityDropdown] =
     useState<boolean>(false)
 
