@@ -1,6 +1,6 @@
 /* cyrillic-ext */
 @font-face {
-  font-family: 'JetBrains';
+  font-family: 'JetBrains Mono', monospace;
   font-style: normal;
   font-weight: 400;
   src: url(https://fonts.gstatic.com/s/jetbrainsmono/v13/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTN1OVgaY.woff2) format('woff2');
@@ -8,7 +8,7 @@
 }
 /* cyrillic */
 @font-face {
-  font-family: 'JetBrains';
+  font-family: 'JetBrains Mono', monospace;
   font-style: normal;
   font-weight: 400;
   src: url(https://fonts.gstatic.com/s/jetbrainsmono/v13/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTPlOVgaY.woff2) format('woff2');
@@ -16,7 +16,7 @@
 }
 /* greek */
 @font-face {
-  font-family: 'JetBrains';
+  font-family: 'JetBrains Mono', monospace;
   font-style: normal;
   font-weight: 400;
   src: url(https://fonts.gstatic.com/s/jetbrainsmono/v13/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTOVOVgaY.woff2) format('woff2');
@@ -24,7 +24,7 @@
 }
 /* vietnamese */
 @font-face {
-  font-family: 'JetBrains';
+  font-family: 'JetBrains Mono', monospace;
   font-style: normal;
   font-weight: 400;
   src: url(https://fonts.gstatic.com/s/jetbrainsmono/v13/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTNVOVgaY.woff2) format('woff2');
@@ -32,7 +32,7 @@
 }
 /* latin-ext */
 @font-face {
-  font-family: 'JetBrains';
+  font-family: 'JetBrains Mono', monospace;
   font-style: normal;
   font-weight: 400;
   src: url(https://fonts.gstatic.com/s/jetbrainsmono/v13/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTNFOVgaY.woff2) format('woff2');
@@ -40,7 +40,7 @@
 }
 /* latin */
 @font-face {
-  font-family: 'JetBrains';
+  font-family: 'JetBrains Mono', monospace;
   font-style: normal;
   font-weight: 400;
   src: url(https://fonts.gstatic.com/s/jetbrainsmono/v13/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTOlOV.woff2) format('woff2');
