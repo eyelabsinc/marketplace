@@ -59,7 +59,7 @@ const Navbar: FC = () => {
     null
   )
   const isMobile = useMediaQuery('(max-width: 770px)')
-  const showDesktopSearch = useMediaQuery('(min-width: 1400px)')
+  const showDesktopSearch = useMediaQuery('(min-width: 1200px)')
   const [hasCommunityDropdown, setHasCommunityDropdown] =
     useState<boolean>(false)
 
@@ -115,7 +115,7 @@ const Navbar: FC = () => {
           )
           setHasCommunityDropdown(true)
         } else {
-          setShowLinks(false)
+          setShowLinks(true)
           setHasCommunityDropdown(false)
           !showDesktopSearch
             ? setFilterComponent(
@@ -140,9 +140,10 @@ const Navbar: FC = () => {
   }
 
   return (
-    <nav className="sticky top-0 z-[1000] col-span-full flex items-center justify-between gap-2 border-b border-[#D4D4D4] bg-eye px-6 py-4 dark:border-neutral-600 dark:eye md:gap-3 md:py-6 md:px-16">
-    {/* // <nav className="sticky top-0 z-[1000] col-span-full flex items-center justify-between gap-2 border-b border-[#D4D4D4] eye px-6 py-4 dark:border-neutral-600 dark:eye md:gap-3 md:py-6 md:px-16"> */}
-      <NavbarLogo className="z-10 max-w-[300px]" />
+    
+     <nav className="sticky top-0 z-[1000] col-span-full flex items-center justify-between gap-2 border-b border-[#D4D4D4] bg-eye px-6 py-4 dark:border-neutral-600 dark:eye md:gap-3 md:py-6 md:px-16">
+  
+      <NavbarLogo className="z-10 max-w-[300px]" /> 
       {showLinks && (
         <div className="z-10 ml-12 hidden items-center gap-11 lg:flex">
           {externalLinks.map(({ name, url }) => (
